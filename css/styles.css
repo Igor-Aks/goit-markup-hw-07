@@ -39,10 +39,10 @@ ul {
   padding-left: 0;
 }
 
-.section {
+/* .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 /* прибираємо маркери списку */
 ul {
@@ -61,25 +61,25 @@ img {
 }
 
 /* параметри  контейнеру */
-.container {
+/* .container {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
-}
+} */
 
-body {
+/* body {
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-}
+} */
 
 /* нижня рамка в header */
-.header {
+/* .header {
   border-bottom: 1px solid #ececec;
-}
+} */
 
-.logo {
+/* .logo {
   font-family: 'Raleway', sans-serif;
   color: var(--primary-text-color);
   font-weight: 700;
@@ -89,17 +89,17 @@ body {
 
   margin-top: 25px;
   margin-bottom: 25px;
-}
+} */
 
 /* колір першої частини логотипу */
 .accent {
   color: var(--accent-color);
 }
 
-.nav {
+/* .nav {
   display: flex;
   align-items: center;
-}
+} */
 
 /* прибираю крайню геометрію */
 .nav-list .nav-list-item + .nav-list-item {
@@ -107,7 +107,7 @@ body {
 }
 
 /* текст посилань в хедері */
-.nav-list {
+/* .nav-list {
   color: var(--primary-text-color);
   font-size: 14px;
   font-weight: 500;
@@ -116,31 +116,31 @@ body {
 
   display: flex;
   margin-left: 93px;
-}
+} */
 
 /* збільшую розмір клікабельного сектору для посилань в навігації*/
-.nav-link {
+/* .nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
-}
+} */
 
 /* маркер поточної сторінки */
-.nav-link.current {
+/* .nav-link.current {
   position: relative;
 
   color: var(--accent-color);
-}
+} */
 
 /* підкреслення для поточної сторінки */
-.nav-link.current::after {
+/* .nav-link.current::after {
   position: absolute;
   content: '';
   display: block;
@@ -152,10 +152,10 @@ body {
   border-radius: 2px;
 
   background: var(--accent-color);
-}
+} */
 
 /* пошта та номер телефону в хедері */
-.header-address-list {
+/* .header-address-list {
   display: flex;
   margin-left: auto;
 
@@ -163,10 +163,10 @@ body {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-}
+} */
 
 /* колір тексту пошта та телефон в хедері*/
-.header-address-item {
+/* .header-address-item {
   display: flex;
 
   color: var(--paragraph-color);
@@ -174,10 +174,10 @@ body {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-}
+} */
 
 /* міняю колір тексту пошта і номер телефону в хедері та збільшую розмір клікабельного сектору */
-.header-address-link {
+/* .header-address-link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -187,12 +187,12 @@ body {
   color: var(--paragraph-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.header-address-link:hover,
+/* .header-address-link:hover,
 .header-address-link:focus {
   color: var(--accent-color);
-}
+} */
 
 /* прибираю крайню геометрію для пошти в хедері*/
 .header-address-list .header-address-item + .header-address-item {
@@ -200,11 +200,11 @@ body {
 }
 
 /* колір іконок конверт та моб. телефон у хедері */
-.header-address-icon {
+/* .header-address-icon {
   fill: #757575;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* ховер і фокус для іконок конверт та моб. телефон у хедері */
 /* когда ховерим по ссылке, иконка меняет цвет */
@@ -213,7 +213,7 @@ body {
   fill: var(--accent-color);
 }
 
-.hero {
+/* .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
@@ -224,10 +224,10 @@ body {
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero-image.jpg');
-}
+} */
 
 /* текст в герої */
-.hero-title {
+/* .hero-title {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -240,10 +240,10 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
-}
+} */
 
 /* кнопка "замовити послугу" */
-.action-button {
+/* .action-button {
   display: block;
   padding: 10px 32px;
   margin: 0 auto;
@@ -266,20 +266,20 @@ body {
 .action-button:hover,
 .action-button:focus {
   background: #188ce8;
-}
+} */
 
 /* flex для секції "особливості" */
-.features-list {
+/* .features-list {
   display: flex;
   gap: 10px;
-}
+} */
 
-.features-item {
+/* .features-item {
   width: 370px;
-}
+} */
 
 /* заголовки в секції "особливості" */
-.features-title {
+/* .features-title {
   margin-bottom: 10px;
   margin-top: 30px;
 
@@ -290,7 +290,7 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   text-transform: uppercase;
-}
+} */
 
 .icon-features-background {
   display: flex;
@@ -524,7 +524,7 @@ body {
 }
 
 /* приховуємо заголовок "our projects" */
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -535,7 +535,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
 /* робимо flex для кнопок фільтра */
 .filter-list {
@@ -668,15 +668,15 @@ body {
   text-align: left;
 }
 
-.footer {
+/* .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: var(--hero-footer-background);
-}
+} */
 
 /* "studio" білим кольором в футері */
-.logo-white {
+/* .logo-white {
   display: block;
   margin-bottom: 20px;
 
@@ -687,7 +687,7 @@ body {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-}
+} */
 
 /* колір адреси (посилання на мапу) в футері*/
 .footer-map-link {
