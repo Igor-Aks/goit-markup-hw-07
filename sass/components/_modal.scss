@@ -1,4 +1,4 @@
-/* задній фон при відкритті модального вікна */
+//background when the modal window is open
 .backdrop {
 	position: fixed;
 	top: 0;
@@ -15,7 +15,6 @@
 	pointer-events: none;
 }
 
-/* модальне вікно */
 .modal {
 	position: absolute;
 	top: 50%;
@@ -31,7 +30,6 @@
 	border-radius: 4px;
 }
 
-/* кнопка закриття модального вікна */
 .modal-close-button {
 	position: absolute;
 	top: 8px;
@@ -46,7 +44,6 @@
 	outline: none;
 }
 
-/* іконка закриття модального вікна */
 .modal-close-icon {
 	width: 11px;
 	height: 11px;
@@ -82,57 +79,85 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 10px;
+
+	& label {
+		margin-bottom: 5px;
+
+		color: var(--paragraph-color);
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.16;
+		letter-spacing: 0.01em;
+	}
+
+  & input {
+		padding-left: 42px;
+		width: 100%;
+		height: 40px;
+
+		//remove the border from the browser
+		border: none;
+
+		border: 1px solid rgba(33, 33, 33, 0.2);
+		border-radius: 4px;
+		outline: none;
+		cursor: pointer;
+
+		transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-element label {
-	margin-bottom: 5px;
+	& svg {
+		position: absolute;
+		top: 50%;
+		left: 12px;
+		/* translate: 0 -50%; */
+		transform: translateY(-50%);
 
-	color: var(--paragraph-color);
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	& textarea {
+		padding: 12px 16px;
+		resize: none;
+		width: 448px;
+		height: 120px;
+
+	//remove the border from the browser
+	border: none;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 1.16;
 	letter-spacing: 0.01em;
-}
-
-.form-element input {
-	padding-left: 42px;
-	width: 100%;
-	height: 40px;
-
-	/* прибираю бордер від браузера */
-	border: none;
-
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
+	color: var(--primary-text-color);
 	outline: none;
 	cursor: pointer;
 
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
 }
 
-.input-wrap {
-	position: relative;
+.form-element textarea:focus {
+	border-color: var(--accent-color);
 }
 
-.form-element svg {
-	position: absolute;
-	top: 50%;
-	left: 12px;
-	/* translate: 0 -50%; */
-	transform: translateY(-50%);
-
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* при фокусі на поле input іконка змінює колір */
+//when focus on the input field - the icon changes color
 .form-element:focus-within svg {
 	fill: var(--accent-color);
 }
 
-/* при фокусі на поле, рамка змінює колір */
+//when focus on the field - the border changes color
 .form-element:focus-within input {
 	border-color: var(--accent-color);
+}
+
+.input-wrap {
+	position: relative;
 }
 
 .human-icon {
@@ -155,39 +180,56 @@
 	height: 13px;
 }
 
-.form-element textarea {
-	padding: 12px 16px;
-	resize: none;
-	width: 448px;
-	height: 120px;
-
-	/* прибираю бордер від браузера */
-	border: none;
-
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
-	color: var(--primary-text-color);
-	outline: none;
-	cursor: pointer;
-
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-element textarea:focus {
-	border-color: var(--accent-color);
-}
-
-/* Погодження з розсилкою */
+//accept the terms of the contract
 .accept {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 30px;
+
+	//accept the terms of the contract text
+	& label {
+		display: flex;
+		align-items: center;
+
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.71;
+		color: var(--paragraph-color);
+		letter-spacing: 0.03em;
+	}
+
+		//hide the checkbox from the browser
+	& input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+}
+
+/* галочка змінює колір при натисканні на квадратик або на напис "Погоджуюся з розсилкою
+та приймаю Умови договору"
+----------------------------------------------------------------------------------------
+Читається так: До .checkbox застосовується синій фон та синій бордер, якщо input, що є
+вкладеним в .accept та водночас стоїть перед label, є в стані checked*/
+
+.accept input:checked + label .checkbox {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+}
+
+.accept-link {
+	text-decoration: underline;
+	color: var(--accent-color);
 }
 
 .checkbox {
@@ -204,51 +246,6 @@
 	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* текст "погоджуюся з розсилкою..." */
-.accept label {
-	display: flex;
-	align-items: center;
-
-	font-style: normal;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
-	color: var(--paragraph-color);
-	letter-spacing: 0.03em;
-}
-
-/* ховаємо чекбокс від браузера */
-.accept input {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
-/* галочка змінює колір при натисканні на квадратик або на напис "Погоджуюся з розсилкою
-та приймаю Умови договору"
-----------------------------------------------------------------------------------------
-Читається так: До .checkbox застосовується синій фон та синій бордер, якщо input, що є
-вкладеним в .accept та водночас стоїть перед label, є в стані checked*/
-
-.accept input:checked+label .checkbox {
-	background: var(--accent-color);
-	border-color: var(--accent-color);
-}
-
-.accept-link {
-	text-decoration: underline;
-	color: var(--accent-color);
-}
-
-/* Кнопка відправити */
 .modal-submit-btn {
 	display: flex;
 	align-items: center;
@@ -272,9 +269,9 @@
 	letter-spacing: 0.06em;
 
 	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-submit-btn:hover,
-.modal-submit-btn:focus {
-	background: #188ce8;
+	&:hover,
+	&:focus {
+		background: #188ce8;
+	}
 }
