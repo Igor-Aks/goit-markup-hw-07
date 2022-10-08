@@ -1,14 +1,28 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
-@import "./components/page-header/header";
-@import "./components/page-header/header-logo";
-@import "./components/page-header/nav";
-@import "./components/page-header/nav-list";
-@import "./components/page-header/nav-link";
-@import "./components/page-header/header-address-item";
-@import "./components/page-header/header-address-list";
-@import "./components/page-header/header-address-link";
-@import "./components/page-header/header-address-icon";
-@import "./components/section";
-@import "./components/page-footer/footer";
+@import "./base/common";
+
+//header
+@import "./components/header";
+
+//hero
+@import "./components/hero";
+
+//modal
+@import "./components/modal";
+
+//features
+@import "./components/features";
+
+//what we do
+@import "./components/what-we-do";
+
+//team
+@import "./components/team";
+
+//our-clients
+@import "./components/our-clients";
+
+//footer
+@import "./components/footer";
 
