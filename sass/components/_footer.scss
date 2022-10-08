@@ -5,7 +5,7 @@
 	background-color: var(--hero-footer-background);
 }
 
-/* "studio" білим кольором в футері */
+// "studio" white color
 .logo-white {
 	display: block;
 	margin-bottom: 20px;
@@ -19,7 +19,7 @@
 	letter-spacing: 0.03em;
 }
 
-/* колір адреси (посилання на мапу) в футері*/
+//address color (map link)
 .footer-map-link {
 	color: var(--primary-white-color);
 	font-size: 14px;
@@ -29,9 +29,14 @@
 	font-style: normal;
 
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 }
 
-/* колір тексту пошта та телефон в футері*/
+//text color for mail and phone
 .footer-address-link {
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 14px;
@@ -41,33 +46,28 @@
 	font-style: normal;
 
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 }
 
 .footer-address-item {
 	margin-bottom: 10px;
+
+	//remove the extreme geometry for the phone number
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
-/* прибираю крайню геометрію для номеру телефона в футері*/
-.footer-address-item:last-child {
-	margin-bottom: 0;
-}
-
-.footer-map-link:hover,
-.footer-map-link:focus {
-	color: var(--accent-color);
-}
-
-.footer-address-link:hover,
-.footer-address-link:focus {
-	color: var(--accent-color);
-}
-
-/* секція в футері з логотипом та адресою  */
+//section with the logo and address
 .footer-address {
 	margin-right: 70px;
 }
 
-/* слоган "ПРИЄДНУЙТЕСЬ" в футері*/
+//action word
 .footer-action-word {
 	margin-bottom: 20px;
 
@@ -79,7 +79,7 @@
 	text-transform: uppercase;
 }
 
-/* секція в футері з іконками на соц. мережі */
+//section with social network icons
 .container.footer-content {
 	display: flex;
 	justify-content: space-between;
@@ -111,11 +111,11 @@
 	color: var(--primary-white-color);
 
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-	background-color: var(--accent-color);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+	}
 }
 
 .footer-social-icon {
@@ -124,20 +124,40 @@
 	fill: currentColor;
 }
 
-//form in footer
 .footer-form {
 	margin-left: 93px;
 }
 
 .form-field {
 	display: flex;
+
+	& label {
+			margin-bottom: 20px;
+
+			color: var(--primary-white-color);
+			text-transform: uppercase;
+		}
+
+ 	& input {
+		margin-right: 12px;
+		border: none;
+		width: 358px;
+		height: 50px;
+		padding: 15px;
+
+		background: var(--hero-footer-background);
+		color: var(--primary-white-color);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+		border-radius: 4px;
+		outline: none;
+
+		transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
 }
 
-.form-field label {
-	margin-bottom: 20px;
-
-	color: var(--primary-white-color);
-	text-transform: uppercase;
+.form-field input:focus {
+	border-color: var(--accent-color);
 }
 
 .form-subscribe {
@@ -152,28 +172,6 @@
 	text-transform: uppercase;
 }
 
-.form-field input {
-	margin-right: 12px;
-	border: none;
-	width: 358px;
-	height: 50px;
-	padding: 15px;
-
-	background: var(--hero-footer-background);
-	color: var(--primary-white-color);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-	border-radius: 4px;
-	outline: none;
-
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field input:focus {
-	border-color: var(--accent-color);
-}
-
-// button "subscribe" in footer
 .submit-btn {
 	display: flex;
 	align-items: center;
@@ -193,11 +191,11 @@
 	letter-spacing: 0.06em;
 
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.submit-btn:hover,
-.submit-btn:focus {
-	background: #188ce8;
+	&:hover,
+	&:focus {
+		background: #188ce8;
+	}
 }
 
 .paper-plane-icon {
@@ -208,6 +206,7 @@
 	fill: currentColor;
 }
 
+//fallback
 /* .submit-btn::after {
   content: '';
   width: 24px;
