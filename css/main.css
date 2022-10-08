@@ -575,7 +575,6 @@ img {
   padding-top: 0;
 }
 
-/* flex для "what we do" */
 .what-we-do-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -586,7 +585,6 @@ img {
   gap: 30px;
 }
 
-/* заголовки "what we do" */
 .what-we-do-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
@@ -600,7 +598,6 @@ img {
 .thumb {
   position: relative;
 }
-
 .thumb > .label {
   position: absolute;
   bottom: 0;
