@@ -6,7 +6,7 @@
 }
 
 // "studio" white color
-.logo-white {
+.footer-address__logo {
 	display: block;
 	margin-bottom: 20px;
 
@@ -20,7 +20,7 @@
 }
 
 //address color (map link)
-.footer-map-link {
+.footer-address__map-link {
 	color: var(--primary-white-color);
 	font-size: 14px;
 	font-weight: 400;
@@ -37,7 +37,7 @@
 }
 
 //text color for mail and phone
-.footer-address-link {
+.footer-address__link {
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 14px;
 	font-weight: 400;
@@ -53,7 +53,7 @@
 	}
 }
 
-.footer-address-item {
+.footer-address__item {
 	margin-bottom: 10px;
 
 	//remove the extreme geometry for the phone number
@@ -86,12 +86,12 @@
 	align-items: baseline;
 }
 
-.footer-social-list {
+.footer-social {
 	display: flex;
 	gap: 10px;
 }
 
-.footer-social-item {
+.footer-social__item {
 	display: flex;
 
 	width: 44px;
@@ -100,7 +100,7 @@
 	border-radius: 50%;
 }
 
-.footer-social-link {
+.footer-social__link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -118,7 +118,7 @@
 	}
 }
 
-.footer-social-icon {
+.footer-social__icon {
 	width: 20px;
 	height: 20px;
 	fill: currentColor;
@@ -128,39 +128,40 @@
 	margin-left: 93px;
 }
 
-.form-field {
+.footer-form_wrap {
 	display: flex;
-
-	& label {
-		margin-bottom: 20px;
-
-		color: var(--primary-white-color);
-		text-transform: uppercase;
-	}
-
- 	& input {
-		margin-right: 12px;
-		border: none;
-		width: 358px;
-		height: 50px;
-		padding: 15px;
-
-		background: var(--hero-footer-background);
-		color: var(--primary-white-color);
-		border: 1px solid rgba(255, 255, 255, 0.3);
-		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-		border-radius: 4px;
-		outline: none;
-
-		transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	& input:focus {
-	border-color: var(--accent-color);
-	}
 }
 
-.form-subscribe {
+// .footer-form_wrap label {
+// 	margin-bottom: 20px;
+
+// 	color: var(--primary-white-color);
+// 	text-transform: uppercase;
+// }
+
+.footer-form_wrap .footer-form__input {
+	margin-right: 12px;
+	border: none;
+	width: 358px;
+	height: 50px;
+	padding: 15px;
+
+	background: var(--hero-footer-background);
+	color: var(--primary-white-color);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+	outline: none;
+
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form_wrap input:focus {
+	border-color: var(--accent-color);
+	}
+
+
+.footer-form__title {
 	margin-bottom: 20px;
 
 	font-size: 14px;
