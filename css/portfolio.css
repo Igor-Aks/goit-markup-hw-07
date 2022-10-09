@@ -24,24 +24,6 @@
   overflow: hidden;
 }
 
-body {
-  color: var(--primary-text-color);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.container {
-  width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 0 auto;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 h1,
 h2,
 h3,
@@ -70,6 +52,24 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+body {
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .header {

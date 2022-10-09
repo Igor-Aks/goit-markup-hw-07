@@ -2,13 +2,13 @@
 	background-color: var(--secondary-background);
 }
 
-.team-list {
+.team__list {
 	display: flex;
 	justify-content: center;
 	gap: 30px;
 }
 
-.team-worker {
+.team__item {
 	width: 270px;
 
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -17,18 +17,18 @@
 	background-color: var(--primary-white-color);
 }
 
-.team-title {
-	margin-bottom: 50px;
+// .team-title {
+// 	margin-bottom: 50px;
 
-	color: var(--title-text-color);
-	font-size: 36px;
-	font-weight: 700;
-	line-height: 1.2;
-	letter-spacing: 0.03em;
-	text-align: center;
-}
+// 	color: var(--title-text-color);
+// 	font-size: 36px;
+// 	font-weight: 700;
+// 	line-height: 1.2;
+// 	letter-spacing: 0.03em;
+// 	text-align: center;
+// }
 
-.worker-name {
+.team__name {
 	margin-bottom: 10px;
 
 	color: var(--title-text-color);
@@ -40,7 +40,7 @@
 }
 
 //the text of the employee's job description text
-.worker-post {
+.team__position {
 	margin-bottom: 30px;
 
 	color: var(--paragraph-color);
@@ -51,16 +51,16 @@
 }
 
 // div for employee description
-.worker-description {
+.team__description {
 	padding: 30px;
 }
 
-.worker-social-list {
+.team__social-list {
 	display: flex;
 	gap: 10px;
 }
 
-.worker-social-item {
+.team__social-item {
 	display: flex;
 	justify-content: center;
 
@@ -70,7 +70,7 @@
 	border-radius: 50%;
 }
 
-.worker-social-link {
+.team__social-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,7 +89,7 @@
 
 }
 
-.worker-social-icon {
+.team__social-icon {
 	width: 20px;
 	height: 20px;
 
@@ -99,7 +99,7 @@
 }
 
 //when hover on the link of social icons networks - the icon changes color
-.worker-social-link:hover .worker-social-icon,
-.worker-social-link:focus .worker-social-icon {
+.team__social-link:hover .team__social-icon,
+.team__social-link:focus .team__social-icon {
 	fill: var(--primary-white-color);
 }
