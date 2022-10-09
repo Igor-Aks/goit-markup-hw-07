@@ -1,3 +1,4 @@
+
 // bottom border in header
 .header {
 	border-bottom: 1px solid #ececec;
@@ -62,7 +63,7 @@
 
 	color: var(--accent-color);
 
-//underline for the current page
+	//underline for the current page
 	&::after {
 		position: absolute;
 		content: '';
@@ -112,10 +113,17 @@
 
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+	//when hover on the link - mail and phone number change color
 	&:hover,
 	&:focus {
-			color: var(--accent-color);
-		}
+		color: var(--accent-color);
+	}
+
+		//when hover on the link - envelope and mobile phone icons change color
+	&:hover .header-address-icon,
+	&:focus .header-address-icon {
+		fill: var(--accent-color);
+	}
 }
 
 //remove the extreme geometry for mail in the header
@@ -128,12 +136,4 @@
 	fill: #757575;
 
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-//hover and focus for envelope and mobile phone icons in the header
-//when hover on the link - the icon changes color
-.header-address-link:hover .header-address-icon,
-.header-address-link:focus .header-address-icon {
-	fill: var(--accent-color);
 }

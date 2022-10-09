@@ -193,6 +193,9 @@ body {
 .header-address-link:hover, .header-address-link:focus {
   color: var(--accent-color);
 }
+.header-address-link:hover .header-address-icon, .header-address-link:focus .header-address-icon {
+  fill: var(--accent-color);
+}
 
 .header-address-list .header-address-item + .header-address-item {
   margin-left: 50px;
@@ -202,11 +205,6 @@ body {
   fill: #757575;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-address-link:hover .header-address-icon,
-.header-address-link:focus .header-address-icon {
-  fill: var(--accent-color);
 }
 
 .hero {
@@ -288,7 +286,7 @@ body {
   border-radius: 4px;
 }
 
-.modal-close-button {
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -300,8 +298,14 @@ body {
   cursor: pointer;
   outline: none;
 }
+.modal__close-btn:hover .modal__close-icon {
+  fill: var(--accent-color);
+}
+.modal__close-btn:focus .modal__close-icon {
+  fill: var(--accent-color);
+}
 
-.modal-close-icon {
+.modal__close-icon {
   width: 11px;
   height: 11px;
   fill: currentColor;
@@ -310,17 +314,7 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* при ховері на кнопку закриття модалки - хрестик в середині змінює колір */
-.modal-close-button:hover .modal-close-icon {
-  fill: var(--accent-color);
-}
-
-/* при фокусі на кнопку закриття модалки - хрестик в середині змінює колір */
-.modal-close-button:focus .modal-close-icon {
-  fill: var(--accent-color);
-}
-
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: 700;
@@ -330,7 +324,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.form-element {
+.form-modal__element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +334,14 @@ body {
           flex-direction: column;
   margin-bottom: 10px;
 }
-.form-element label {
+.form-modal__element:focus-within svg {
+  fill: var(--accent-color);
+}
+.form-modal__element:focus-within .form-modal__input {
+  border-color: var(--accent-color);
+}
+
+.form-modal__label {
   margin-bottom: 5px;
   color: var(--paragraph-color);
   font-style: normal;
@@ -349,7 +350,8 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-.form-element input {
+
+.form-modal__input {
   padding-left: 42px;
   width: 100%;
   height: 40px;
@@ -361,7 +363,12 @@ body {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-element svg {
+
+.input-wrap {
+  position: relative;
+}
+
+.form-modal__element svg {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -371,7 +378,8 @@ body {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-element textarea {
+
+.form-modal__comments {
   padding: 12px 16px;
   resize: none;
   width: 448px;
@@ -391,20 +399,8 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-element textarea:focus {
+.form-modal__comments:focus {
   border-color: var(--accent-color);
-}
-
-.form-element:focus-within svg {
-  fill: var(--accent-color);
-}
-
-.form-element:focus-within input {
-  border-color: var(--accent-color);
-}
-
-.input-wrap {
-  position: relative;
 }
 
 .human-icon {
@@ -439,7 +435,8 @@ body {
           align-items: center;
   margin-bottom: 30px;
 }
-.accept label {
+
+.accept__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -453,7 +450,8 @@ body {
   color: var(--paragraph-color);
   letter-spacing: 0.03em;
 }
-.accept input {
+
+.accept__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -465,14 +463,13 @@ body {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  /* галочка змінює колір при натисканні на квадратик або на напис "Погоджуюся з розсилкою
+  та приймаю Умови договору"
+  ----------------------------------------------------------------------------------------
+  Читається так: До .checkbox застосовується синій фон та синій бордер, якщо .accept__input, що є
+  вкладеним в .accept та водночас стоїть перед .accept__label, є в стані checked*/
 }
-
-/* галочка змінює колір при натисканні на квадратик або на напис "Погоджуюся з розсилкою
-та приймаю Умови договору"
-----------------------------------------------------------------------------------------
-Читається так: До .checkbox застосовується синій фон та синій бордер, якщо input, що є
-вкладеним в .accept та водночас стоїть перед label, є в стані checked*/
-.accept input:checked + label .checkbox {
+.accept .accept__input:checked + .accept__label .checkbox {
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -499,7 +496,7 @@ body {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-submit-btn {
+.modal__submit-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +526,7 @@ body {
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-submit-btn:hover, .modal-submit-btn:focus {
+.modal__submit-btn:hover, .modal__submit-btn:focus {
   background: #188ce8;
 }
 
@@ -598,6 +595,7 @@ body {
 .what-we-do__wrap {
   position: relative;
 }
+
 .what-we-do__wrap > .what-we-do__label {
   position: absolute;
   bottom: 0;
@@ -699,6 +697,9 @@ body {
 .team__social-link:hover, .team__social-link:focus {
   background-color: var(--accent-color);
 }
+.team__social-link:hover .team__social-icon, .team__social-link:focus .team__social-icon {
+  fill: var(--primary-white-color);
+}
 
 .team__social-icon {
   width: 20px;
@@ -706,11 +707,6 @@ body {
   fill: currentColor;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team__social-link:hover .team__social-icon,
-.team__social-link:focus .team__social-icon {
-  fill: var(--primary-white-color);
 }
 
 .our-clients-title {
@@ -760,9 +756,7 @@ body {
 .our-clients-link:hover, .our-clients-link:focus {
   border: 1px solid #2196f3;
 }
-
-.our-clients-link:hover .our-clients-icon,
-.our-clients-link:focus .our-clients-icon {
+.our-clients-link:hover .our-clients-icon, .our-clients-link:focus .our-clients-icon {
   fill: var(--accent-color);
 }
 
@@ -927,7 +921,6 @@ body {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .form-field input:focus {
   border-color: var(--accent-color);
 }
