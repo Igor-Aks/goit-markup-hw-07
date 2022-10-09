@@ -8,22 +8,11 @@
 	gap: 30px;
 }
 
-// .common-title {
-// 	margin-bottom: 50px;
-
-// 	color: var(--title-text-color);
-// 	font-size: 36px;
-// 	font-weight: 700;
-// 	line-height: 1.2;
-// 	letter-spacing: 0.03em;
-// 	text-align: center;
-// }
-
 .what-we-do__wrap {
 	position: relative;
 }
 
-.what-we-do__wrap > .what-we-do__label {
+.what-we-do__label {
 	position: absolute;
 	bottom: 0;
 	display: block;
