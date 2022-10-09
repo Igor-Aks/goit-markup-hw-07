@@ -127,11 +127,11 @@ body {
   color: var(--accent-color);
 }
 
-.nav__link.current {
+.nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
-.nav__link.current::after {
+.nav__link--current::after {
   position: absolute;
   content: "";
   display: block;
